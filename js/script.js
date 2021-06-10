@@ -63,5 +63,5 @@ if (totale % 2 === 0 && randomNumPc % 2 === 0) {
 } else if(totale % 2 !=0 && randomNumPc % 2 != 0){
     document.getElementById("output").innerText += " \n Hai vinto di nuovo!";
 }else{
-    document.getElementById("output").innerText += " \n Mi dispiace hai perso";
+    document.getElementById("output").innerText += " \n Mi dispiace hai perso, ha vinto il pc!";
 }
