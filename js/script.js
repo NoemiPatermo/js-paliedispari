@@ -67,7 +67,7 @@ var sceltaPariDispari = prompt("Scegli: pari o dispari?");
 document.getElementById("output").innerHTML = "Ok, hai scelto:  " +  sceltaPariDispari;//non me lo stampa
 
 
-var userNumber =  prompt("Inserisci un numero da 1 a 5");
+var userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 document.getElementById("output").innerText = "il numero inserito dall'utente è  " +  userNumber;
 
 var min= 1;
