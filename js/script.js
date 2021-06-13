@@ -27,6 +27,36 @@ var parolaDivisa = parola.split("");
  }
  */
 
+/*CORREZIONE DI OTTAVIO 
+function isPalindroma(word){ //RITORNA UN BOOLEANO, TRUE SE PALINDROMA 
+    var reverseWord = '';
+
+    //giriamo la parola
+    //crea un for che legga una stringa dall'ultimo carattere fino al primo
+    //così puoi scrivere la parola in ordine inverso di caratteri
+
+    for (var i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+    //console.log(reverseWord);
+
+    if(word === reverseWord){
+        return true;
+    } else {
+            return false;
+        
+    }
+}
+var userWord = prompt ("inserisci una parola");
+var palindromaHtmlElement = document.getElementsByClassName('result-palindroma')[0];
+
+if (isPalindroma(userWord)) {
+    palindromaHtmlElement.innerHtml = "la parola è palindroma";
+} else{
+    palindromaHtmlElement.innerHtml = "la parola NON  è palindroma";
+}
+*/
+
  //Pari e Dispari
 //L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -36,8 +66,9 @@ var parolaDivisa = parola.split("");
 var sceltaPariDispari = prompt("Scegli: pari o dispari?");
 document.getElementById("output").innerHTML = "Ok, hai scelto:  " +  sceltaPariDispari;//non me lo stampa
 
-var userNum =  parseInt(prompt("Inserisci un numero da 1 a 5"));
-document.getElementById("output").innerText = "il numero inserito dall'utente è  " +  userNum;
+
+var userNumber =  prompt("Inserisci un numero da 1 a 5");
+document.getElementById("output").innerText = "il numero inserito dall'utente è  " +  userNumber;
 
 var min= 1;
 var max = 5;
@@ -48,10 +79,10 @@ function getRandomNumber(min, max){
 var randomNumPc = getRandomNumber(1, 5);
 document.getElementById("output").innerText += " \n il numero random del pc è " +   randomNumPc;
 
-function somma (userNum, randomNumPc){ //SOMMA DEI NUMERI NUMERO UTENTE E NUMERO PC
+/*function somma (userNum, randomNumPc){ //SOMMA DEI NUMERI NUMERO UTENTE E NUMERO PC
     return userNum + randomNumPc;
-}
-var totale = somma(userNum, randomNumPc);
+}*/
+var totale = userNumber +  randomNumPc;
 document.getElementById("output").innerText += " \n la somma dei due numeri è " +   totale;
 
 // SE LA SOMMA ESCE PARI O DISPARI LO FAI CON UN FUNZIONE (SE LA SOMMA è PARI E L' UTENTE (AVEVA SCRITTO PARI) HA INDOVINATO E HA VINTO)
@@ -64,4 +95,4 @@ if (totale % 2 === 0 && randomNumPc % 2 === 0) {
     document.getElementById("output").innerText += " \n Hai vinto di nuovo!";
 }else{
     document.getElementById("output").innerText += " \n Mi dispiace hai perso, ha vinto il pc!";
-}
+} 
